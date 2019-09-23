@@ -1,10 +1,11 @@
-def adj_R2(X_train,y_train,reg):
+def adj_R2(x,y,reg):
     """
     Input : (X_train,y_train,Regression Model)
     Output: gives the adjusted R2 of the linear model
+    Note: 'from sklearn.linear_model import LinearRegression' needs to be impotred before running
     """
     r2=reg.score(x,y)
     n = x.shape[0]
     p = x.shape[1]
     adjusted_r2 = 1-((1-r2)*(n-1)/(n-p-1))
-    return adjusted_r2
+    return round(adjusted_r2,2),round(r2,2) 
