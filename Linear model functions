@@ -1,3 +1,4 @@
+# Adjusted R2
 def adj_R2(x,y,reg):
     """
     Input : (X_train,y_train,Regression Model)
