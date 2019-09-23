@@ -1,0 +1,10 @@
+def adj_R2(X_train,y_train,reg):
+    """
+    Input : (X_train,y_train,Regression Model)
+    Output: gives the adjusted R2 of the linear model
+    """
+    r2=reg.score(x,y)
+    n = x.shape[0]
+    p = x.shape[1]
+    adjusted_r2 = 1-((1-r2)*(n-1)/(n-p-1))
+    return adjusted_r2
